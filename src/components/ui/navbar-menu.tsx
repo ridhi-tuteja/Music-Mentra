@@ -1,7 +1,16 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+// import { motion } from "motion/react";
+import { motion } from "framer-motion"; 
 
+// const transition = {
+//   type: "spring",
+//   mass: 0.5,
+//   damping: 11.5,
+//   stiffness: 100,
+//   restDelta: 0.001,
+//   restSpeed: 0.001,
+// };
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -9,7 +18,8 @@ const transition = {
   stiffness: 100,
   restDelta: 0.001,
   restSpeed: 0.001,
-};
+} as const; // ✅ This makes TypeScript happy
+
 
 export const MenuItem = ({
   setActive,
