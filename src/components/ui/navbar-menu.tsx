@@ -11,6 +11,11 @@ import { motion } from "framer-motion";
 //   restDelta: 0.001,
 //   restSpeed: 0.001,
 // };
+
+type HoveredLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  children: React.ReactNode;
+};
+
 const transition = {
   type: "spring",
   mass: 0.5,
@@ -117,7 +122,8 @@ export const ProductItem = ({
   );
 };
 
-export const HoveredLink = ({ children, ...rest }: any) => {
+export const HoveredLink = ({ children, ...rest }: HoveredLinkProps) => {
+//export const HoveredLink = ({ children, ...rest }: any) => {
   return (
     <a
       {...rest}
