@@ -23,7 +23,7 @@ const transition = {
   stiffness: 100,
   restDelta: 0.001,
   restSpeed: 0.001,
-} as const; // ✅ This makes TypeScript happy
+} as const;
 
 
 export const MenuItem = ({
